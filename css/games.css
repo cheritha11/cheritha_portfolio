@@ -1,0 +1,167 @@
+/* ============================================
+   GAMES.CSS
+   ============================================ */
+
+#games {
+  background: rgba(237, 147, 177, 0.08);
+  border-radius: 32px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.game-card {
+  background: white;
+  border: 1.5px solid var(--rose);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--text);
+}
+
+.game-sub {
+  font-size: 12px;
+  color: var(--text-soft);
+  font-weight: 600;
+  margin-top: -6px;
+}
+
+/* --- Number Game --- */
+#hint-box {
+  background: var(--lavender-pale);
+  border: 1.5px solid var(--lavender);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 64px;
+}
+
+#ng-hints-left {
+  font-size: 11px;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+#ng-input {
+  width: 100%;
+  border: 1.5px solid var(--lavender);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#ng-input:focus { border-color: var(--lavender-deep); }
+
+.game-btn-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.game-btn {
+  padding: 9px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: opacity 0.2s, transform 0.1s;
+  letter-spacing: 0.02em;
+}
+
+.game-btn:active { transform: scale(0.97); }
+.game-btn:hover  { opacity: 0.88; }
+
+.game-btn--primary { background: var(--lavender-deep); color: white; }
+.game-btn--rose    { background: var(--rose);          color: white; }
+.game-btn--gold    { background: var(--gold);           color: #412402; }
+
+#ng-feedback {
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 22px;
+}
+
+/* --- Kpop Game --- */
+.kpop-meme-area {
+  background: var(--lavender-pale);
+  border: 1.5px solid var(--lavender);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpop-meme-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  white-space: pre-line;
+}
+
+.kpop-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.kpop-opt {
+  background: var(--lavender-pale);
+  border: 1.5px solid var(--lavender);
+  color: var(--text);
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: var(--font-body);
+}
+
+.kpop-opt:hover    { background: var(--lavender); }
+.kpop-opt.correct  { background: #d4f5e2; border-color: #1a6b3c; color: #1a6b3c; }
+.kpop-opt.wrong    { background: #ffe4e4; border-color: #c0392b; color: #c0392b; }
+
+#kpop-feedback {
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 22px;
+}
+
+.kpop-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+#kpop-score {
+  font-size: 12px;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+/* --- Responsive --- */
+@media (max-width: 680px) {
+  .games-grid { grid-template-columns: 1fr; }
+}

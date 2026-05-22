@@ -1,0 +1,57 @@
+/* ============================================
+   SKILLS.CSS
+   ============================================ */
+
+#skills {
+  background: rgba(200, 194, 240, 0.15);
+  border-radius: 32px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.skill-card {
+  background: white;
+  border: 1.5px solid var(--lavender);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139, 130, 212, 0.15);
+}
+
+.skill-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 13px;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.skill-card-title.pink    { background: #FBEAF0; color: #72243E; }
+.skill-card-title.lavender { background: #EEEDFE; color: #3C3489; }
+.skill-card-title.gold    { background: var(--gold-light); color: #633806; }
+.skill-card-title.teal    { background: #E1F5EE; color: #0F6E56; }
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-pill {
+  background: var(--lavender-pale);
+  border: 1px solid var(--lavender);
+  color: var(--text-soft);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}

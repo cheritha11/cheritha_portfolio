@@ -1,0 +1,98 @@
+/* ============================================
+   PROJECTS.CSS
+   ============================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border: 1.5px solid var(--lavender);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--lavender-deep), var(--rose));
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(139, 130, 212, 0.18);
+}
+
+.project-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.live-badge {
+  display: inline-block;
+  background: #d4f5e2;
+  color: #1a6b3c;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.project-tag {
+  background: var(--lavender-pale);
+  color: var(--text-soft);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--lavender);
+}
+
+.project-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.project-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--lavender-deep);
+  transition: color 0.2s;
+}
+
+.project-link:hover { color: var(--text); }
+
+/* Placeholder card */
+.project-card--placeholder {
+  border-style: dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.placeholder-inner { text-align: center; color: var(--lavender-deep); }
+.placeholder-icon  { font-size: 28px; margin-bottom: 8px; }
+.placeholder-text  { font-size: 14px; font-weight: 700; }
+.placeholder-sub   { font-size: 12px; color: var(--text-soft); margin-top: 4px; }
